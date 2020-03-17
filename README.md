@@ -1,0 +1,7 @@
+The repository is structured as follows:
+
+data: This folder contains snapshots used for the evaluation of the model. Trajectories for the reference atomistic data "aa", corresponding coarse-grained data "cg", our backmapped results "deepbackmap" and snapshots generated with the baseline method can be found. The data can be loaded using the GRO files "aa.gro" or "cg.gro" respectively. The trajectories contain 78 uncorrelated snapshots each for the different temperatures 313K,453K and 568K. 
+Additionally, the folder contains the topology file "topol.top" and an mdp file "md.mdp" to run a Molecular Dynamics simulation with GROMACS. 
+Furthermore, a bash script "evaluate.sh" for the evaluation of local structural features and for the RDF can be found together with the index files for the local structural features and a TPR file "ps_excl.tpr" (where nrexcl=3) to compute the RDF. 
+
+model: This folder contains the code of the model used. Please note that we are working on a new implementation and that the code given here is not ment to be used for other systems than sPS at the moment. The model is built using tensorflow 1.6 and consists of a config file "config.ini" to specify hyperparameters, "atom_rnn.py" to train the model, "model_resnet.py" which contains the residual architecture of the model, "tf_energy.py" which contains some code to compute the different energy terms using tensorflow and "ops.py" which contains some useful functions.
