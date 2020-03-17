@@ -1,6 +1,6 @@
 The repository is structured as follows:
 
-data: This folder contains snapshots used for the evaluation of the model. Trajectories for the reference atomistic data "aa", corresponding coarse-grained data "cg", our backmapped results "deepbackmap" and snapshots generated with the baseline method can be found. The data can be loaded using the GRO files "aa.gro" or "cg.gro" respectively. The trajectories contain 78 uncorrelated snapshots each for the different temperatures 313K,453K and 568K. 
+data: This folder contains snapshots used for the evaluation of the model. Trajectories for the reference atomistic data "aa", corresponding coarse-grained data "cg", our backmapped results "deepbackmap" and snapshots generated with the baseline method can be found. The data can be loaded using the GRO files "aa.gro" or "cg.gro" respectively. There are trajectories for the different temperatures 313K, 453K and 568k, each containing 78 uncorrelated snapshots. 
 Additionally, the folder contains the topology file "topol.top" and an mdp file "md.mdp" to run a Molecular Dynamics simulation with GROMACS. 
 Furthermore, a bash script "evaluate.sh" for the evaluation of local structural features and for the RDF can be found together with the index files for the local structural features and a TPR file "ps_excl.tpr" (where nrexcl=3) to compute the RDF. 
 
